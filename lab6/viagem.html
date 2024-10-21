@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cidade</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Amadora</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+            <a href="pontosinteresse.html">Pontos de Interesse</a>
+            <a href="capitais.html">Capitais</a>
+        </nav>
+        <img src="images/amadora.jpg" alt="Amadora">
+        <img src="images/amadora1_grande.jpg" alt="Amadora">
+        <img src="images/amadora2_grande.jpg" alt="Amadora">
+    </header>
+    <main>
+        <h2>Viagem</h2>
+        <form method="post" action="https://postman-echo.com/post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+    
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
+    
+                <label for="apelido">Apelido:</label>
+                <input type="text" id="apelido" name="apelido" placeholder="Digite seu apelido"><br><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required><br><br>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Detalhes da Viagem</legend>
+    
+                <label for="data_partida">Data de Partida:</label>
+                <input type="date" id="data_partida" name="data_partida" required><br><br>
+    
+                <label for="data_regresso">Data de Regresso:</label>
+                <input type="date" id="data_regresso" name="data_regresso"><br><br>
+    
+                <label for="numero_passageiros">Número de Passageiros:</label>
+                <input type="number" id="n_passageiros" name="numero_passageiros" min="1" value="1"><br><br>
+    
+                <label for="transporte">Meio de transporte favorito:</label>
+                <select id="transporte" name="transporte">
+                    <option value="carro">Carro</option>
+                    <option value="comboio">Comboio</option>
+                    <option value="aviao">Avião</option>
+                    <option value="outro">Outro</option>
+                </select><br><br>
+    
+                <label for="servico">Serviço desejado na viagem:</label><br>
+                <input type="radio" id="servico_basico" name="servico" value="basico" required>
+                <label for="servico_basico">Básico</label><br>
+                <input type="radio" id="servico_premium" name="servico" value="premium">
+                <label for="servico_premium">Premium</label><br><br>
+    
+                <label for="pedidos_especiais">Pedidos especiais:</label><br>
+                <textarea id="pedidos_especiais" name="pedidos_especiais" placeholder="Insira aqui os seus pedidos especiais" rows="4" cols="50"></textarea><br><br>
+    
+                <label for="valor_esperado">Valor esperado por pessoa e por dia:</label>
+                <input type="number" id="valor_esperado" name="valor_esperado" min="0" step="0.01" placeholder="Ex: 100.00"><br><br>
+            </fieldset>
+    
+            <input type="submit" value="Enviar Intenção de Viagem">
+        </form>
+    </main>
+    <footer>
+        <p>DIW 2024</p>
+    </footer>
+</body>
+
+</html>

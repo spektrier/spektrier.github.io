@@ -1,0 +1,134 @@
+* {
+    margin:0;  
+    padding:0;  
+    box-sizing: border-box; 
+}
+
+header,
+main,
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: black;
+  color: white;
+  position: sticky;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav a {
+  color: lightgoldenrodyellow;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:visited {
+    color: rgb(110, 110, 98);
+  }
+
+nav a:hover {
+  background-color: lightgoldenrodyellow;
+  color: black;
+  padding: 5px;
+}
+
+
+article {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background: lightgoldenrodyellow;
+}
+
+#poema {  
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  font-weight: bolder;
+}
+
+#poema p {
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+}
+
+#paisagens {
+  position: relative;
+  overflow: hidden;
+}
+
+#paisagens img {
+  width: 100vw;
+}
+
+#paisagens p {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  font-size: 15px;
+}
+
+#paisagens p a {
+  color: white;
+  text-decoration: none;
+}
+
+#paisagens p a:hover {
+    background-color: gray;
+    padding: 5px;
+}
+
+#cidades{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin:auto;
+  justify-content: center;
+  background-color: rgb(194, 194, 161);
+}
+
+#cidades img{ 
+    border-radius: 20px 0 0 20px;
+}
+
+#cidades section {
+  display: flex;
+  flex-direction:row;
+  width: 200px;
+  height: 70px;
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-top: 100px;
+}
+
+#cidades section:hover {
+  background-color: rgb(200, 202, 189); 
+}
+
+#cidades div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: calc(100% - 100px); 
+  height: 100%;
+  color: black;
+  text-align: center;
+}
+
+body{
+  background-color: rgb(194, 194, 161);
+}

@@ -1,0 +1,142 @@
+h1 {
+    background-color: lightgoldenrodyellow;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #222222;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #d0d0d0;
+}
+
+nav a:hover {
+    background-color: #d0d0d0;
+    padding: 10px;
+    color: black;
+}
+
+header img {
+    height: 400px;
+    width: 617px;
+    background-color: #d0d0d0;
+    padding: 10px;
+}
+
+body {
+    background-color: #d0d0d0;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: white;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#fotografias, #video, #poema {
+    color: rgb(231, 231, 99);
+    font-size: 24px;
+    border-bottom: 2px solid rgb(231, 231, 99);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    font-size: medium;
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    font-size: medium;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pontosinteresse {
+    background-color: lightgoldenrodyellow;
+    color: black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.pontosinteresse h2 {
+    background-color: white;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    max-width: 25%;
+    border: 2px solid black;
+}
+
+.pontosinteresse p {
+    padding: 10px;
+}
+
+.pontosinteresse li {
+    padding: 10px;
+}
+
+.pontosinteresse ol {
+    padding: 10px;
+    list-style-type:lower-roman;
+}
+
+.pontosinteresse ul {
+    padding: 10px;
+    list-style-type:circle;
+}
+
+.pontosinteresse iframe {
+    height: 640px;
+    width: 1040px;
+}
+
+.pontosinteresse table {
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+.pontosinteresse tr {
+    padding: 5px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.pontosinteresse th {
+    padding: 5px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.pontosinteresse td {
+    padding: 5px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: rgb(48, 47, 47);
+    color: white;
+}
