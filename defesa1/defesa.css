@@ -1,0 +1,77 @@
+header {
+    text-align: center;
+    background-color: gray;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid black;
+}
+
+body {
+    background-color: black;
+    color: black;
+    margin: 20px;
+    padding: 20px;
+}
+
+body div {
+    background-color: white;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    border-radius: 15px;
+}
+
+body div h2 {
+    padding: 5px;
+}
+
+body div h3 {
+    font-weight: normal;
+    padding: 5px;
+}
+
+body div p {
+    padding: 10px;
+}
+
+#interfaces {
+    display: flex;
+    justify-content: center;
+}
+
+#interfaces img {
+    width: 200px;
+}
+
+#introducao {
+    justify-content: center;
+}
+
+#laboratorios {
+    justify-content: center;
+}
+
+#laboratorios nav a {
+    background-color: gray;
+    color: white;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    max-width: 10%;
+    border-radius: 5px;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    background-color: gray;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid black;
+}
