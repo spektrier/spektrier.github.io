@@ -4,7 +4,7 @@ const buttonGreen = document.querySelector('#buttonGreen')
 const buttonBlue = document.querySelector('#buttonBlue')
 const textColor = document.querySelector('#textColor')
 const background = document.querySelector('#background')
-const buttonConta = document.querySelector('#buttonConta')
+const buttonCount = document.querySelector('#buttonCount')
 const variableCount = document.querySelector('#counter')
 const colorValue = document.querySelector('#colorInput')
 const backgroundColor = document.querySelector('#backgroundColor')
@@ -47,4 +47,4 @@ buttonRed.addEventListener('click', buttonChangeRed);
 buttonGreen.addEventListener('click', buttonChangeGreen);
 buttonBlue.addEventListener('click', buttonChangeBlue);
 background.addEventListener('keyup', changeTextBoxColor)
-buttonConta.addEventListener('click', count)
+buttonCount.addEventListener('click', count)

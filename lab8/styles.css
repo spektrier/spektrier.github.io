@@ -1,5 +1,4 @@
 *{
-    background-color: rgb(236, 236, 236);
     margin: 0;
     padding: 0;
 }
@@ -20,7 +19,7 @@ button:hover{
     background-color: lightgrey;
 }
 
-input{
+input, select{
     border: 2px solid black;
     padding-left: 10px;
 }
