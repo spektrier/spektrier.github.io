@@ -6,7 +6,7 @@ const textColor = document.querySelector('#textColor')
 const background = document.querySelector('#background')
 const buttonCount = document.querySelector('#buttonCount')
 const variableCount = document.querySelector('#counter')
-const colorValue = document.querySelector('#colorInput')
+const colorValue = document.querySelector('#colorValue')
 const backgroundColor = document.querySelector('#backgroundColor')
 clrNumber = 0;
 counter = 0;
@@ -41,10 +41,14 @@ function count(){
     variableCount.innerHTML=counter;
 }
 
+document.querySelector('input').onchange = function() {
+    document.querySelector('body').style.backgroundColor = this.value;
+}
+
 hover.addEventListener('mousehover', hoverText);
 hover.addEventListener('mouseout', hoverText);
 buttonRed.addEventListener('click', buttonChangeRed);
 buttonGreen.addEventListener('click', buttonChangeGreen);
 buttonBlue.addEventListener('click', buttonChangeBlue);
-background.addEventListener('keyup', changeTextBoxColor)
-buttonCount.addEventListener('click', count)
+background.addEventListener('keyup', changeTextBoxColor);
+buttonCount.addEventListener('click', count);

@@ -10,6 +10,7 @@ const colorValue = document.querySelector('#colorInput')
 const backgroundColor = document.querySelector('#backgroundColor')
 const name = document.querySelector('#name')
 const age = document.querySelector('#age')
+const submitButton = document.querySelector('#submitButton')
 const frase = document.querySelector('#frase')
 clrNumber = 0;
 counter = 0;
@@ -49,8 +50,11 @@ document.querySelector('select').onchange = function() {
     this.value;
 }
 
-function printMessage(){
-    document.querySelector('#frase').textContent = `Olá, ${name}!`;
+function showMessage(){
+    document.querySelector('form').onsubmit = () => {
+        frase.textContent = "Olá, " + name.value;
+        return false;
+    }
 }
 
 hover.addEventListener('mousehover', hoverText);
@@ -60,3 +64,4 @@ buttonGreen.addEventListener('click', buttonChangeGreen);
 buttonBlue.addEventListener('click', buttonChangeBlue);
 background.addEventListener('keyup', changeTextBoxColor);
 buttonCount.addEventListener('click', count);
+submitButton.addEventListener('click', showMessage);
