@@ -12,8 +12,9 @@ const name = document.querySelector('#name')
 const age = document.querySelector('#age')
 const submitButton = document.querySelector('#submitButton')
 const frase = document.querySelector('#frase')
-clrNumber = 0;
-counter = 0;
+let clrNumber = 0;
+let counter = 0;
+let autocounter = 0;
 
 function hoverText() {
     hover.innerText = "Obrigado por passares!";
@@ -52,10 +53,15 @@ document.querySelector('select').onchange = function() {
 
 function showMessage(){
     document.querySelector('form').onsubmit = () => {
-        frase.textContent = "Olá, " + name.value;
+        frase.textContent = "Olá, o " + name.value + " tem " + age.value;
         return false;
     }
 }
+
+setInterval(function () {
+    autocounter++;
+    document.getElementById('autocounter').innerText = autocounter; 
+}, 1000);
 
 hover.addEventListener('mousehover', hoverText);
 hover.addEventListener('mouseout', hoverText);
