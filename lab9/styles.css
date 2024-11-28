@@ -66,6 +66,10 @@ section h2 {
     gap: 2em;
 }
 
+#totalPrice {
+    background-color: #333;
+}
+
 article {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -92,6 +96,20 @@ article p {
     color: #ffffffbe;
     background-color: #333;
     margin: 0.5em;
+}
+
+article button {
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+article button:hover {
+    background-color: #005bb5;
 }
 
 footer {
