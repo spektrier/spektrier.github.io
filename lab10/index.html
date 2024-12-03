@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Loja Online</title>
+</head>
+<body>
+    <header>
+        <h1>Loja</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#cesto">Cesto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav>
+
+        <section class="filtro">
+            <label for="categoria-filter">Categoria</label>
+            <select id="categoria-filter">
+                <option value="">Todas as categorias</option>
+            </select>
+        </section>
+
+        <section class="filtro">
+            <label for="ordem-filter">Ordem</label>
+            <select id="ordem-filter">
+                <option value="">Sem ordem</option>
+                <option value="menor">Menor preço</option>
+                <option value="maior">Maior preço</option>
+            </select>
+        </section>
+
+        <section class="filtro">
+            <label for="pesquisa-filter">Procurar</label>
+            <input type="text" id="pesquisa-filter" placeholder="Pesquise por produto">
+        </section>
+    </nav>
+
+    <main>
+        <section id="produtos">
+            <h2>Selecione os seus Produtos</h2>
+            <section id="productsContainer"></section>
+        </section>
+
+        <section id="cesto">
+            <h2>Cesto</h2>
+            <section id="cartContainer"></section>
+            <section id="totalPrice"></section>
+        </section>
+    </main>
+
+    <footer>
+        <p>2024</p>
+    </footer>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

@@ -1,8 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
     inicializarLocalStorage();
-    carregarProdutos(produtos);
-    criaProdutoCesto();
+    fetch("https://deisishop.pythonanywhere.com/products/")
+        .then(response => response.json())
+        .then(produtos => {
+            carregarProdutos(produtos);
+            configurarFiltros(produtos);
+        })
+        .catch(error => console.error('Erro ao carregar produtos:', error));
+    
+    carregarCategorias();
 });
+
+function carregarCategorias() {
+    fetch("https://deisishop.pythonanywhere.com/categories/")
+        .then(response => response.json())
+        .then(categorias => {
+            const filtroCategoria = document.querySelector("#categoria-filter");
+            filtroCategoria.innerHTML = '<option value="">Todas as categorias</option>';
+            categorias.forEach(categoria => {
+                const option = document.createElement("option");
+                option.value = categoria;
+                option.textContent = categoria;
+                filtroCategoria.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar categorias:', error));
+}
+
+function filtrarProdutos(produtos) {
+    const categoriaSelecionada = document.querySelector("#categoria-filter").value;
+    const ordenacao = document.querySelector("#ordem-filter").value;
+    const pesquisa = document.querySelector("#pesquisa-filter").value.toLowerCase();
+
+    let produtosFiltrados = produtos;
+
+    if (categoriaSelecionada) {
+        produtosFiltrados = produtosFiltrados.filter(produto => produto.category == categoriaSelecionada);
+    }
+    if (pesquisa) {
+        produtosFiltrados = produtosFiltrados.filter(produto => 
+            produto.title.toLowerCase().includes(pesquisa)
+        );
+    }
+    if (ordenacao === "menor") {
+        produtosFiltrados.sort((a, b) => a.price - b.price);
+    } else if (ordenacao === "maior") {
+        produtosFiltrados.sort((a, b) => b.price - a.price);
+    }
+
+    carregarProdutos(produtosFiltrados);
+}
+
+function configurarFiltros(produtos) {
+    document.querySelector("#categoria-filter").addEventListener("change", () => filtrarProdutos(produtos));
+    document.querySelector("#ordem-filter").addEventListener("change", () => filtrarProdutos(produtos));
+    document.querySelector("#pesquisa-filter").addEventListener("keyup", () => filtrarProdutos(produtos));
+}
 
 function inicializarLocalStorage() {
     if (!localStorage.getItem("produtos-selecionados")) {
@@ -12,6 +65,7 @@ function inicializarLocalStorage() {
 
 function carregarProdutos(produtos) {
     const container = document.querySelector("#productsContainer"); 
+    container.innerHTML = "";
 
     produtos.forEach(produto => {
         console.log(produto.id, produto.title);
@@ -122,8 +176,6 @@ function calcularPrecoTotal(cart) {
 
     const totalElement = document.querySelector("#totalPrice");
     if (totalElement) {
-        const price = document.createElement("p");
-        price.textContent = `Preço Total: ` + total + `€`;
-        article.appendChild(price);
+        totalElement.textContent = `Preço Total: ${total.toFixed(2)}€`;
     }
 }
