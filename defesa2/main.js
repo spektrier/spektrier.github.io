@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Erro ao carregar produtos:', error));
     
     carregarCategorias();
+    configurarBotaoAdicionaTodos();
 });
 
 function carregarCategorias() {
@@ -181,6 +182,10 @@ function calcularPrecoTotal(cart) {
 }
 
 function configurarBotaoAdicionaTodos() {
+    const cart = JSON.parse(localStorage.getItem("produtos-selecionados")) || [];
+    const button = document.createElement("button");
+    button.textContent = "+ Adicionar todos os itens ao cesto";
+
     button.addEventListener("click", () => {
         cart.forEach((produto, index) => {
             const article = document.createElement("article");
